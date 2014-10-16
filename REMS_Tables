@@ -1,0 +1,334 @@
+--------------------------------------------------------
+--  File created - Thursday-August-14-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table Client
+--------------------------------------------------------
+
+  CREATE TABLE "Client" 
+   (	"Client_ID" NUMBER(*,0), 
+	"Client_NAME" VARCHAR2(250 BYTE), 
+	"Client_TELEPHONE" NUMBER(*,0), 
+	"Client_EMAIL" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into Client
+SET DEFINE OFF;
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (1,'Jacobs',21562356,'shaafi@saix.net');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (2,'Kyo',214471028,'kyo.dawood@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (3,'Viktoria',731298358,'vika.dawood@gmail');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (4,'Sonia',712949492,'nassimadollie@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (5,'Yusuf',285686838,'yusufwood@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (6,'John',235969124,'malnaai@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (7,'Bruce',928485862,'Bruce@saix.net');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (8,'Abdurahman',8299918945,'maani@saix.net');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (9,'Svetlana',119485823,'sveta@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (10,'Ken',821238572,'Ken.Masters@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (61,'Farieda',25632563,'Farieda@gmail.com');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (21,'hash',1222,'sga@');
+Insert into Client (Client_ID,Client_NAME,Client_TELEPHONE,Client_EMAIL) values (41,'Bruce',562322,'bruce@saix.net');
+--------------------------------------------------------
+--  DDL for Index PK_ClientID
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PK_ClientID" ON "Client" ("Client_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table Client
+--------------------------------------------------------
+
+  ALTER TABLE "Client" ADD CONSTRAINT "PK_ClientID" PRIMARY KEY ("Client_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+
+
+
+--------------------------------------------------------
+--  File created - Thursday-August-14-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table AGENT
+--------------------------------------------------------
+
+  CREATE TABLE "AGENT" 
+   (	"AGENT_ID" NUMBER(*,0), 
+	"AGENT_NAME" VARCHAR2(250 BYTE), 
+	"AGENT_TELEPHONE" NUMBER(*,0), 
+	"AGENT_EMAIL" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into AGENT
+SET DEFINE OFF;
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (41,'Gibson',56235623,'Gibson@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (2,'SMITH',834074348,'shaafie@rms.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (3,'DAWOOD',333333333,'DAWOOD@rms.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (4,'DAVIDS',83458948,'DAVIDS@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (5,'JACOBS',610256348,'JACOBS@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (6,'VISAGIE',88563248,'VIGASIE@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (7,'DOUBELL',215624578,'DOUBELL@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (8,'OLIVERIA',845263245,'OLIVEIRA@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (9,'HATTING',614045623,'HATTING@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (10,'CONRADIE',714567458,'CONRADIE@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (11,'WINDVOGEL',729024521,'WINDVOGEL@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (12,'SNEYD',214521452,'SNEYD@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (13,'VENA',785627845,'VENA@rems.net');
+Insert into AGENT (AGENT_ID,AGENT_NAME,AGENT_TELEPHONE,AGENT_EMAIL) values (14,'WARD',715627895,'WARD@rems.net');
+--------------------------------------------------------
+--  DDL for Index PK_AGENTID
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PK_AGENTID" ON "AGENT" ("AGENT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table AGENT
+--------------------------------------------------------
+
+  ALTER TABLE "AGENT" ADD CONSTRAINT "PK_AGENTID" PRIMARY KEY ("AGENT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+
+
+
+--------------------------------------------------------
+--  File created - Thursday-August-14-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table AUDIT_LOG
+--------------------------------------------------------
+
+  CREATE TABLE "AUDIT_LOG" 
+   (	"AUDIT_ID" NUMBER(*,0), 
+	"ACTION" VARCHAR2(250 BYTE), 
+	"AUDIT_DATE" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into AUDIT_LOG
+SET DEFINE OFF;
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (1,'Property added',to_date('02/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (22,'Price changed to: 230000',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (23,'Property Updated',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (24,'Price changed to: 230000',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (25,'Property Updated',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (61,'Property Added',to_date('12/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (98,'Price changed to: 230000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (99,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (93,'Property Added',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (21,'Property Added',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (26,'Property Added',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (27,'Property Added',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (28,'Property Added',to_date('10/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (41,'Property Added',to_date('12/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (96,'Price changed to: 780000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (97,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (101,'Price changed to: 340000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (102,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (103,'Price changed to: 5',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (104,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (105,'Price changed to: 2100000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (106,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (107,'Price changed to: 560000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (108,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (127,'Price changed to: 2',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (128,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (129,'Price changed to: 2000000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (130,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (131,'Price changed to: 1500000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (132,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (133,'Price changed to: 2000000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (134,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (141,'Price changed to: 650000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (142,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (161,'Price changed to: 2000000',to_date('14/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (162,'Property Updated',to_date('14/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (181,'Property Added',to_date('14/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (42,'Property Added',to_date('12/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (43,'Property Added',to_date('12/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (87,'Property Added',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (100,'Property Added',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (109,'Price changed to: 780000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (110,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (111,'Price changed to: 650000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (112,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (113,'Price changed to: 3',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (114,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (115,'Price changed to: 2',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (116,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (117,'Price changed to: 5',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (118,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (119,'Price changed to: 500000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (120,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (121,'Price changed to: 500000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (122,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (123,'Price changed to: 230000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (124,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (125,'Price changed to: 780000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (126,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (135,'Price changed to: 1500000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (136,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (137,'Price changed to: 3000000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (138,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (139,'Price changed to: 2000000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (140,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (143,'Price changed to: 500000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (144,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (145,'Price changed to: 230000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (146,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (147,'Price changed to: 340000',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (148,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (149,'Price changed to: 345555',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (150,'Property Updated',to_date('13/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (163,'Price changed to: 3000000',to_date('14/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (164,'Property Updated',to_date('14/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (165,'Price changed to: 890000',to_date('14/AUG/14','DD/MON/RR'));
+Insert into AUDIT_LOG (AUDIT_ID,ACTION,AUDIT_DATE) values (166,'Property Updated',to_date('14/AUG/14','DD/MON/RR'));
+--------------------------------------------------------
+--  DDL for Index PK_AUDITID
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PK_AUDITID" ON "AUDIT_LOG" ("AUDIT_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table AUDIT_LOG
+--------------------------------------------------------
+
+  ALTER TABLE "AUDIT_LOG" ADD CONSTRAINT "PK_AUDITID" PRIMARY KEY ("AUDIT_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "AUDIT_LOG" MODIFY ("AUDIT_ID" NOT NULL ENABLE);
+
+
+
+--------------------------------------------------------
+--  File created - Thursday-August-14-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table PROPERTYSTATE
+--------------------------------------------------------
+
+  CREATE TABLE "PROPERTYSTATE" 
+   (	"STATUS_ID" NUMBER(*,0), 
+	"STATUSA" VARCHAR2(250 BYTE), 
+	"STATUSB" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into PROPERTYSTATE
+SET DEFINE OFF;
+Insert into PROPERTYSTATE (STATUS_ID,STATUSA,STATUSB) values (146,'Available','Sold');
+--------------------------------------------------------
+--  DDL for Index PK_STATUSID
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PK_STATUSID" ON "PROPERTYSTATE" ("STATUS_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table PROPERTYSTATE
+--------------------------------------------------------
+
+  ALTER TABLE "PROPERTYSTATE" ADD CONSTRAINT "PK_STATUSID" PRIMARY KEY ("STATUS_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+
+
+
+--------------------------------------------------------
+--  File created - Thursday-August-14-2014   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table SUBURB
+--------------------------------------------------------
+
+  CREATE TABLE "SUBURB" 
+   (	"SUBURB_ID" NUMBER(*,0), 
+	"SUBURB_NAME" VARCHAR2(250 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into SUBURB
+SET DEFINE OFF;
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (1,'Cape Town');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (2,'Ottery');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (3,'Kensington');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (4,'Vincent Park');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (5,'Ranburg');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (6,'Sandton');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (7,'Bryanston');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (8,'Benoni');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (9,'Kuils River');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (10,'Lotus River');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (11,'Athlone');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (63,'Alex');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (66,'Mowbray');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (67,'Heideveld');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (69,'Fish Hoek');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (70,'Gugulethu');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (71,'Vasco');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (72,'Nyanga');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (74,'Glencairn');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (62,'Delft Extension 1');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (22,'Muizenberg');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (61,'Kalk Bay');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (64,'Crawford');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (65,'Lotus River');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (68,'Monta Vista');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (73,'Simons Town');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (101,'Maitland');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (102,'Bellville');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (103,'Montana');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (104,'Bishops');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (105,'Wynberg');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (21,'goodwood');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (41,'djddjdjdj');
+Insert into SUBURB (SUBURB_ID,SUBURB_NAME) values (81,'Hillbrow');
+--------------------------------------------------------
+--  DDL for Index PK_SUBURBID
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PK_SUBURBID" ON "SUBURB" ("SUBURB_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table SUBURB
+--------------------------------------------------------
+
+  ALTER TABLE "SUBURB" ADD CONSTRAINT "PK_SUBURBID" PRIMARY KEY ("SUBURB_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+
